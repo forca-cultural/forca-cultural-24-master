@@ -57,7 +57,7 @@ let points = document.getElementById("points");
 
 localStorage.setItem("counter", String(0))
 
-points.textContent += counterPoints;
+points.textContent += localStorage.getItem("counter");
 
 palavra = document.getElementById('#palavraSecreta')
 criarPalavraSecreta()
@@ -89,7 +89,7 @@ function palavraTela() {
 
 }
 
-let VerificarLetraEscolhida = letra => {
+let VerificarLetraEscolhida = (letra)=> {
 
     document.getElementById('tecla ' + letra).disabled = true;
     if (tentativas > 0) {
