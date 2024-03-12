@@ -30,6 +30,17 @@ h1 {
 }
 
 
+h3 {
+    font-size: 1.1rem;
+    letter-spacing: -1px;
+    color: #fff;
+    text-shadow: 0 0 12px #fff;
+    max-width: 600px;
+    text-align: center;
+    line-height: 48px;
+}
+
+
 .container {
     display: flex;
     width: 100%;

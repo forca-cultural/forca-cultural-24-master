@@ -53,6 +53,11 @@ const palavras = [
     }
 ]
 
+let points = document.getElementById("points");
+
+localStorage.setItem("counter", String(0))
+
+points.textContent += counterPoints;
 
 palavra = document.getElementById('#palavraSecreta')
 criarPalavraSecreta()
@@ -126,6 +131,7 @@ function comparaListas(letra) {
     if (vitoria === true) {
         abreModal('Muito bem!', 'Você conseguiu adivinhar a palavra escondida.')
         tentativas = 0;
+        localStorage.setItem("counter", String(parseInt(localStorage.getItem("counter")) + 1))
     }
 
     function imagemForca() {
