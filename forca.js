@@ -55,7 +55,9 @@ const palavras = [
 
 let points = document.getElementById("points");
 
-localStorage.setItem("counter", String(0))
+if (!localStorage.getItem("counter")) {
+    localStorage.setItem("counter", String(0));
+}
 
 points.textContent += localStorage.getItem("counter");
 
